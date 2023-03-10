@@ -8,12 +8,19 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+import java.util.UUID;
+
 /**
  * Hello world!
  */
 public class App {
     
     public static void main(String[] args) {
+        String uuid = UUID.randomUUID().toString();
+        System.out.println(uuid.length());
+    }
+    
+    /*public static void main(String[] args) {
         // 主线程
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         // 表示工作线程数
@@ -37,5 +44,5 @@ public class App {
             workGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
-    }
+    }*/
 }
