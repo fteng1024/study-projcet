@@ -1,0 +1,6 @@
+# ApplicationContextInitializer
+org.springframework.context.ApplicationContextInitializer=\
+  com.fly.initializer.FlyApplicationContextInitializer
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+  com.fly.listener.FlyApplicationListener

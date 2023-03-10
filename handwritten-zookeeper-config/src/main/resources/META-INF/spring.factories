@@ -1,0 +1,6 @@
+# EnableAutoConfiguration
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#  com.fly.zkconfig.autoconfig.ZkAutoConfig
+# ApplicationContextInitializer
+org.springframework.context.ApplicationContextInitializer=\
+  com.fly.zkconfig.autoconfig.ZkConfigApplicationContextInitializer

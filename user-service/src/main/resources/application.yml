@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+logging:
+  level:
+    com.fly.user.client.OrderFeignClient: debug
+
+feign:
+  client:
+    config:
+      default:
+        logger-level: full
+
+lecturer:
+  fly

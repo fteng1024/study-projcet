@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: spring-cloud-zookeeper
+  cloud:
+    zookeeper:
+      config:
+        root: config
+        profile-separator: "-"
+        enabled: true
+      connect-string: localhost:2181
+
+server:
+  port: 8082
