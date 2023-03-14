@@ -8,7 +8,7 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
 /**
- * @author <a href="mailto:tengfei-zj@zhaojiling.com"> tengfei
+ * @author <a href="mailto:fteng1024@gmail.com"> tengfei
  * @since 2023/3/6
  */
 public class CreateZNode {

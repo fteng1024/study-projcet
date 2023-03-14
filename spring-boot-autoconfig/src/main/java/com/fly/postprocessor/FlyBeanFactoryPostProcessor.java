@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * @author <a href="mailto:tengfei-zj@zhaojiling.com"> tengfei
+ * @author <a href="mailto:fteng1024@gmail.com"> tengfei
  * @since 2023/2/20
  */
 @Component

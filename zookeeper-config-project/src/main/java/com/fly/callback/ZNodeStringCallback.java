@@ -3,7 +3,7 @@ package com.fly.callback;
 import org.apache.zookeeper.AsyncCallback;
 
 /**
- * @author <a href="mailto:tengfei-zj@zhaojiling.com"> tengfei
+ * @author <a href="mailto:fteng1024@gmail.com"> tengfei
  * @since 2023/3/6
  */
 public class ZNodeStringCallback implements AsyncCallback.StringCallback {

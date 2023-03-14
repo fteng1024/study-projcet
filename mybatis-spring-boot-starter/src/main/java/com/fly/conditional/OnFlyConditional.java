@@ -9,7 +9,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import java.lang.annotation.Annotation;
 
 /**
- * @author <a href="mailto:tengfei-zj@zhaojiling.com"> tengfei
+ * @author <a href="mailto:fteng1024@gmail.com"> tengfei
  * @since 2023/2/20
  */
 public class OnFlyConditional implements Condition {

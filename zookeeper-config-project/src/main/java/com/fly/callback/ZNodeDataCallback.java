@@ -4,7 +4,7 @@ import org.apache.zookeeper.AsyncCallback;
 import org.apache.zookeeper.data.Stat;
 
 /**
- * @author <a href="mailto:tengfei-zj@zhaojiling.com"> tengfei
+ * @author <a href="mailto:fteng1024@gmail.com"> tengfei
  * @since 2023/3/6
  */
 public class ZNodeDataCallback implements AsyncCallback.DataCallback {

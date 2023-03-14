@@ -4,3 +4,4 @@ logs
 /**/.flattened-pom.xml
 /**/*.iml
 /*.iml
+nacos-home-standalone/

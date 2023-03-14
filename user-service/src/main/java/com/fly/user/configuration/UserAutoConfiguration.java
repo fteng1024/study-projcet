@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author <a href="mailto:tengfei-zj@zhaojiling.com"> tengfei
+ * @author <a href="mailto:fteng1024@gmail.com"> tengfei
  * @since 2023/2/23
  */
 @Configuration
