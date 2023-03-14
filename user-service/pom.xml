@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.fly</groupId>
-    <artifactId>study-projcet</artifactId>
+    <artifactId>study-project</artifactId>
     <version>${revision}</version>
   </parent>
   
@@ -25,11 +25,6 @@
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-    </dependency>
-  
-    <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
     </dependency>
     
     <dependency>

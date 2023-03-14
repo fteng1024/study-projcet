@@ -24,29 +24,37 @@ import java.util.List;
 @RequestMapping("/user")
 @Slf4j
 public class UserController {
-    
+
     @Resource
     private RestTemplate restTemplate;
-    
-    
+
+
     @PostMapping("/search")
     public void search() {
         //        System.out.println(userName);
         //        System.out.println(userAge);
         System.out.println("userController search ...");
     }
-    
+
     @PostMapping("/callOrder")
     public void callOrder() {
         String result = restTemplate.getForObject("http://order-service/order/search", String.class);
         System.out.println(result);
     }
-    
+
     @Resource
     private OrderFeignClient orderFeignClient;
-    
+
     @GetMapping("/openfeign")
     public String openfeign() {
         return orderFeignClient.search();
+    }
+
+    @Resource
+    private DiscoveryClient discoveryClient;
+
+    @GetMapping("/instances")
+    public List<ServiceInstance> instances() {
+        return this.discoveryClient.getInstances("order-service");
     }
 }
