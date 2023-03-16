@@ -15,6 +15,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("/config")
+@RefreshScope
 public class ConfigCtrl {
 
     @Value("${lecturer}")
@@ -31,5 +32,28 @@ public class ConfigCtrl {
     @GetMapping("/localConfigEnv")
     public String localConfigEnv() {
         return "[Environment] lecturer:" + environment.getProperty("lecturer");
+    }
+
+    @Value("${age}")
+    private Integer age;
+
+    @GetMapping("/ageLocalConfigValue")
+    public String ageLocalConfigValue() {
+        return "[@Value] age:" + age;
+    }
+
+    @GetMapping("/ageLocalConfigEnv")
+    public String ageLocalConfigEnv() {
+        return "[Environment] age:" + environment.getProperty("age");
+    }
+
+    @Value("${custom.person.name}")
+    private String name;
+    @Value("${custom.person.idCard}")
+    private String idCard;
+
+    @GetMapping("/localConfig")
+    public String localConfig(){
+        return "[@Value] custom.person.name:" + name + "\tcustom.person.idCard:"+idCard;
     }
 }

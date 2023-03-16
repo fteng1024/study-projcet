@@ -17,7 +17,7 @@ public class OnFlyConditional implements Condition {
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
         Environment environment = context.getEnvironment();
         String value = environment.getProperty("age");
-        if (value != null && value.equals("17")) {
+        if (value != null && "17".equals(value)) {
             return true;
         }
         return false;

@@ -13,17 +13,17 @@ public class ZkClientUtil {
     
     private static ZooKeeper zooKeeper;
     
-    private static final CountDownLatch countDownLatch = new CountDownLatch(1);
+    private static final CountDownLatch COUNT_DOWN_LATCH = new CountDownLatch(1);
     
     public static ZooKeeper getZkConnect(String zkServer) throws Exception {
         zooKeeper = new ZooKeeper(zkServer, 30000, (event) -> {
             Watcher.Event.KeeperState state = event.getState();
             if (Watcher.Event.KeeperState.SyncConnected == state) {
                 System.out.println("连接 zkServer 成功。");
-                countDownLatch.countDown();
+                COUNT_DOWN_LATCH.countDown();
             }
         });
-        countDownLatch.await();
+        COUNT_DOWN_LATCH.await();
         return zooKeeper;
     }
     
