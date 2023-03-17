@@ -18,6 +18,7 @@
     <module>spring-cloud-zookeeper</module>
     <module>netty-project</module>
     <module>gateway-project</module>
+    <module>redis-project</module>
   </modules>
 
   <properties>
@@ -29,6 +30,9 @@
     <nacos.version>2.0.4</nacos.version>
     <curator-recipes.version>5.4.0</curator-recipes.version>
     <netty.version>4.1.89.Final</netty.version>
+    <mybatis-starter.version>2.3.0</mybatis-starter.version>
+    <druid-starter.version>1.2.16</druid-starter.version>
+    <redisson.version>3.20.0</redisson.version>
 
 
     <maven.compiler.source>8</maven.compiler.source>
@@ -101,6 +105,29 @@
         <artifactId>netty-all</artifactId>
         <version>${netty.version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid-starter.version}</version>
+      </dependency>
+
+
+      <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis-starter.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+      <dependency>
+        <groupId>org.redisson</groupId>
+        <artifactId>redisson</artifactId>
+        <version>${redisson.version}</version>
+      </dependency>
+
+
 
 
     </dependencies>

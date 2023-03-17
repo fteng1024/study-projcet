@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+    config:
+      shard-configs[0]:
+        data-id: gateway-service.yaml
+        refresh: true

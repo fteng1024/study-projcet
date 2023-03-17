@@ -1,28 +1,38 @@
 server:
   port: 8090
-
 spring:
-  application:
-    name: gateway-service
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
     gateway:
-      discovery:
-        locator:
-          enabled: true
       routes:
         - id: fly_path_route
           uri: http://localhost:8081
-#          uri: http://localhost:8888
           predicates:
             - Path=/fly/**
           filters:
             - StripPrefix=1
+
+        - id: fly_header_route
+          uri: lb://order-service
+          predicates:
+            - Path=/fly2/**
+#            - FlyTimeBetween=上午6:01,下午6:00
+          filters:
+            - StripPrefix=1
+#            - AddRequestHeader=X-Request-red,blue
+            - FlyPrint=fly,17
+
+
+    discovery:
+      locator:
+        enabled: true
   devtools:
     restart:
       additional-paths: src/main/java
+  application:
+    name: gateway-service
 
 management:
   endpoints:
